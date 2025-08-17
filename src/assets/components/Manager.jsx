@@ -9,7 +9,7 @@ const Manager = () => {
   const [form, setform] = useState({ site: "", username: "", password: "" })
   const [passwordArray, setpasswordArray] = useState([])
   const getPasswords=async() => {
-    let req= await fetch("http://localhost:3000/")
+    let req= await fetch("https://possop-backend-riyazvros-projects.vercel.app")
     let passwords=await req.json()
     console.log(passwords); 
     setpasswordArray(passwords)
@@ -81,7 +81,7 @@ const Manager = () => {
     setpasswordArray([...passwordArray, {...form,id:uuidv4()}])
     // localStorage.setItem("passwords", JSON.stringify([...passwordArray, {...form,id:passwordArray.id}]))
     // console.log([...passwordArray, form]);
-    let res=await fetch("http://localhost:3000/",{
+    let res=await fetch("https://possop-backend-riyazvros-projects.vercel.app",{
       method:"POST",
       body:JSON.stringify({...form,id:uuidv4()}),
       headers:{
@@ -120,7 +120,7 @@ const Manager = () => {
 
       setpasswordArray(passwordArray.filter(item=>item.id!==id))
       // localStorage.setItem("passwords",JSON.stringify(passwordArray.filter(item=>item.id!==id)))
-      let res=await fetch("http://localhost:3000/",{
+      let res=await fetch("https://possop-backend-riyazvros-projects.vercel.app",{
         method:"DELETE",
         body:JSON.stringify({id}),
         headers:{
