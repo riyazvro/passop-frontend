@@ -10,6 +10,7 @@ const Navbar = () => {
           <span className=''>Pass</span>
           <span className='text-green-600'> OP /&gt;</span>
           <h1>RIYAZZZZ</h1>
+          <h1>❤️❤️❤️</h1>
         </div>
         
         <a href='https://github.com/riyazvro' className='cursor-pointer flex justify-center items-center gap-2 bg-green-400 rounded-full p-1 px-2 ring-1'>
